@@ -1,4 +1,4 @@
-import styled, {keyframes, css} from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 export const Container = styled.div`
   max-width: 700px;
@@ -30,7 +30,7 @@ export const Form = styled.form`
 
   input{
     flex:1;
-    border: 1px solid #DDD;
+    border: 1px solid ${props => (props.error ? '#FF0000' : '#eee')};
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 17px;
@@ -107,7 +107,7 @@ export const List = styled.ul`
 
 
 export const DeleteButton = styled.button.attrs({
-  type:'button'
+  type: 'button'
 })`
   background: transparent;
   color:#0D2636;
